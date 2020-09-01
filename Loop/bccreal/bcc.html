@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương real</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bảng Cửu Chương</title>
+    </head>
+    <body>
+        <script>
+            let bang = "<table border='1'>";
+            let i, j;
+            for(i=1; i<10; i++){
+                bang +="<tr>";
+                for(j=2; j<10; j++){
+                    bang += "<td style='text-align:center; width:70px; height:30px'>" + j + "x" + i + "=" + i*j + "</td>";
+                }
+                bang +="</tr>";
+            }
+            document.write(bang)
+            bang += "</table>";
+        </script>
+    </body>
+    </html>
+</body>
+</html>

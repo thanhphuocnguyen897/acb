@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var n = +prompt('nhập số lượng phần tử: ');
+        var num, count =0;
+        for(let i =0; i<n; i++){
+            num = prompt('nhập phần tử: ');
+            a.push(num);
+            if(a[i]/1==a[i]){
+                count++;
+            }
+        }
+        document.write('số kí tự số là ' + count);
+    </script>
+</body>
+</html>

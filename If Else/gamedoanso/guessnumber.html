@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game!</title>
+</head>
+<body>
+    <button style="margin:200px; width:150px; height:50px; font-family:'Times New Roman', Times, serif; font-size:larger" type="button" onclick="play()">Chơi/Chơilại</button>
+    <p>giải thích luật chơi:   bla bla bla!!</p>
+    <script>
+        function play(){
+            let range = +prompt('Nhập khoảng bạn muốn đoán: ')
+            let yournumb;
+            let count = 0;
+            let random = Math.floor(Math.random() * range);
+            alert('khoảng bạn muốn đoán là ' + range);
+            while (count <3){
+                yournumb = +prompt('Nhập số bạn chọn: ');
+                alert('số bạn chọn là: ' + yournumb);
+                if(yournumb == random){
+                    alert(`Chúc mừng bạn đã chiến thắng!!!`) ;
+                    break;
+                }
+                else if(yournumb < random){
+                    alert(` số bạn chọn bé hơn kết quả`);
+                }
+                else{
+                    alert(` số bạn chọn lớn hơn kết quả`);    
+                    break;
+                }
+                count ++;
+            }
+            alert(` kết quả là ` + random);
+        }
+                /*switch(yournumb){
+                    case range: document.getElementById('equal').innerHTML =` Chúc mừng bạn đã chiến thắng </br> `;
+                    case (range < yournumb) : document.getElementById('below').innerHTML =` số bạn chọn lớn hơn kết quả </br> `;
+                    default: document.getElementById('below').innerHTML =` số bạn chọn bé hơn hoặc lớn hơn kết quả </br> `;
+                }*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foot and Meter</title>
+</head>
+<body>
+    <!-- <div>
+        <p>Feet</p>
+        <p id="feet0">Change</p>
+    </div>
+    <div>
+        <p>Meter</p>
+        <p id="meter0">Change</p>
+    </div>
+    <div>
+        <p>Meter</p>
+        <p id="meter1">Change</p>
+
+    </div>
+    <div>
+        <p>Feet</p>
+        <p id="foot1">Change</p>
+
+    </div> -->
+<script>
+        function footToMeter(foot){
+        let meter = 0.305*foot;
+        return meter;
+        }
+        function meterToFoot(meter){
+        let foot = 3.279*meter;
+        return foot;
+        }
+        for(let i = 1; i<=10; i++){
+            let result = footToMeter(i);
+            document.write(i + "feet = ");
+            document.write(result + ' meter</br>');
+        }
+        for(let j = 20; j<=65; j+=5){
+            let rs = meterToFoot(j);
+            document.write(j + "meter = ");
+            document.write(rs + ' feet </br>');
+        }
+</script>
+</body>
+</html>

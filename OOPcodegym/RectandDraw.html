@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rect and Draw Rect</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1376px" height="776px" style="border: 2px solid black;"></canvas> <br>
+    <p id="result" style="font-size: 48px;"></p>
+    <script>
+        function Rectangle(x,y,w,h){
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.h = h;
+            this.periMeter = function(){
+                return (x+y)*2;
+            };
+            this.Area = function(){
+                return (x*y);
+            }
+            this.createRectangle = function(){
+                var ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.beginPath();
+                ctx.rect(this.x, this.y, this.w, this.h);
+                ctx.fillStyle = "Red";
+                ctx.fill();
+            }
+        }
+        var rect1 = new Rectangle(100,80,450,300);
+        rect1.createRectangle();
+        document.getElementById("result").innerHTML = "Rerimeter: "+ rect1.periMeter() + "  Area: "+ rect1.Area();
+    </script>
+</body>
+</html>

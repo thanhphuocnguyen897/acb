@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Status</title>
+</head>
+<body>
+    <script>
+        var library = [
+            {
+                author: 'Bill Gate',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of the Hunger Games',
+                readingStatus: false
+            }];
+            for(let i =0; i<library.length; i++){
+                var book = '<b>' +"'" + library[i].title + "'"+ '</b>' + ' by ' + library[i].author;
+                if(library.readingStatus){
+                    document.write('You have already read this book ' + book + "<br>");
+                }
+                else{
+                    document.write('You have not read this book '+ book + "<br>");
+                }
+            }
+    </script>
+</body>
+</html>

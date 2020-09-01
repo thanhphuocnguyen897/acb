@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Products Program</title>
+    <link rel="stylesheet" type="text/css" href="products.css">
+</head>
+<body>
+    <h1>Quản lí và thay đổi sản phẩm</h1>
+    <div><span>Product Name </span><span id="i"></span> products</div>
+    <form action="">
+        <input type="text" name="products" id="input" value="Nhập sp mới...">
+        <button class="button" type="button" onclick="addProduct(input.value)">Thêm</button><br><br>
+        <label for="edit">Muốn đổi tên?</label><br>
+        <input type="text" name="edit" id="edit"><br><br>
+    </form>
+    <div id="bang"></div>
+    <script src="products.js"></script>
+</body>
+</html>

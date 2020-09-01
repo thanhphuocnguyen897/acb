@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get date Method</title>
+</head>
+<body>
+    <script>
+        let MyDate = function(day, month, year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function(){
+                return this.day;
+            };
+            this.getMonth = function(){
+                return this.month;
+            };
+            this.getYear = function(){
+                return this.year;
+            };
+            this.setDay = function(day){
+                this.day = day;
+            };
+            this.setMonth = function(month){
+                this.month = month;
+            };
+            this.setYear = function(year){
+                this.year = year;
+            };
+            this.setDate = function(){
+                this.day = 0;
+                this.month = 0;
+                this.year = 0;
+            }
+            this.toString = function(){
+                return this.day.toString() + '/' + this.month.toString() + '/'+ this.year.toString();
+            }
+        };
+        let date = new MyDate(18, 07, 2020);
+        let day = date.getDay();
+        let month = date.getMonth();
+        let year = date.getYear();
+        alert(date.toString());
+        date.setDay(24);
+        date.setMonth(7);
+        date.setYear(2020);
+        let day1 = date.getDay();
+        let month1 = date.getMonth();
+        let year1 = date.getYear();
+        alert(date.toString());
+        date.setDate();
+        alert(date.toString());
+    </script>
+</body>
+</html>

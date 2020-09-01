@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Push and Display</title>
+</head>
+<body>
+    <h2>Sample Screen: </h2>
+    <form action="">
+        <input type="text" name="gtri" id="gtri">
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="display()" >Display</button>
+        <button type="button" onclick="cleardisplay()">Clear Display</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        var array = [];
+        var i;
+        function add(){
+            let gtri = document.getElementById('gtri').value;
+            array.push(gtri);
+        }
+        function display(){
+            for(i in array){
+                document.getElementById('result').innerHTML =  document.getElementById('result').innerHTML + 
+                'Element '+ i + ' = ' + array[i] + '</br>';
+            }
+        }
+        function cleardisplay(){
+            document.getElementById('result').innerHTML = "";
+        }
+    </script>
+</body>
+</html>

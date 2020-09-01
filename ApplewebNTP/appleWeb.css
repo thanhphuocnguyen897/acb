@@ -1,0 +1,269 @@
+/* CSS goes here, at the top of the page */	
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+/* bar */
+.normal-wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    overflow: hidden;}
+#top-bar {
+    width: 100%;
+    background-color: gray;
+    border-bottom: 1px solid;
+    height: 0;
+}
+#navbar {
+    list-style-type: none;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#navbar li {
+    float: left;
+    padding: 5px;
+    margin-left: 80px;
+}
+#navbar li a {
+    display: block;
+    color: burlywood;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+#navbar li a:link, #navbar li a:visited, #navbar li a:active { 
+    text-decoration: none; /* remove underline */
+    color: burlywood;
+
+}
+#navbar li a:link.last-link {
+    /* remove divider */
+    border-right: 0px;
+}
+#navbar li a:hover {
+    /* change color on hover (mouseover) */
+    color: white;
+    background-color: rgb(10, 0, 27);
+}
+.card {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    margin: 0 auto 0 auto;
+    padding: 1px;
+    overflow: auto;
+}
+/*giới thiệu điện thoại */
+.feature-image {
+    max-width: 500px; /* reduce image size while maintaining aspect ratio */
+}
+.hidden {
+    display: none;
+}
+.decrible {
+    width: 50%;
+    padding: 15px 40px;
+    float: left;
+    box-sizing: border-box;
+    margin: 40px auto;
+    overflow: hidden;
+}
+.iphone {
+    width: 50%;
+    padding: 15px 40px;
+    float: left;
+    box-sizing: border-box;
+    margin: 40px auto;
+    overflow: hidden;
+}
+/* so sánh */
+.compare {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 40px;
+    text-align: justify;
+}
+/*phần ưu đãi card*/
+.product {
+    width: 48%;
+    height: 500px;
+    margin: 0px auto;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+}
+#sidepr {
+    width: 48%;
+    margin: auto;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    background-color: white;
+    height: 590px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* content dùng chung */
+.content2 {
+    width: 1350px;
+    height: 590px;
+    margin: 50px auto;
+    padding: 0px 0px;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240)
+    ;
+}
+/* content dùng chung 2*/
+.content1 {
+    width: 1100px;
+    margin: 10px auto;
+    padding: 50px 30px;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240)
+    ;
+}
+.accessories {
+    margin: 20px 10px;
+    width: 345px;
+    text-align: center;
+    padding: 80px 15px;
+    overflow: hidden;
+    background-color: white;
+    box-sizing: border-box;
+    float: left;
+    height: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#figure1 {
+    margin: 30px auto;
+    width: 60%;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: white;
+}
+#figure2 {
+    width: 40%;
+    margin: 30px auto;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 230px 10px;
+    height: 590px;
+}
+#refundandelivery{
+    width: 48%;
+    margin: 0px auto;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    padding: 80px 30px;
+    box-sizing: border-box;
+    background-color: rgb(240, 240, 240);
+}
+#refundandelivery:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*form*/
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    min-width: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 18px;
+    background: #0071e3;
+    color: #fff;
+    text-decoration: none;
+
+}
+.button link, .button:visited {
+    background-color: #0071E3;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+.button:hover, .button:active {
+    background-color: #3384d6;
+  }
+.learnmore {
+    font-size: 18px;
+    line-height: 1.23536;
+    font-weight: 400;
+    color: #06c;
+    /*letter-spacing: -.022em;*/    
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.learnmore:link, .learnmore:visited{
+    color: #06c;
+    text-decoration: none;
+}
+.learnmore:hover, .learnmore:active{
+    color:  #06c;
+    text-decoration: underline;
+}
+.icon-outer {
+    box-sizing: border-box; /* ensure padding and borders do not increase the size */
+    float: left;
+    width: 33.33%;
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+}
+.icon-circle {
+    background: #EEEEEE;
+    color: #B4B4B4; 
+    width: 180px;
+    height: 180px;
+    border-radius: 180px; /* make rounded corners */
+    margin: 0 auto;
+    border: 2px solid #D6D6D6;
+    box-sizing: border-box; /* ensure padding and borders do not increase the size */
+    font-size: 75pt;
+    padding: 30px 0 0 0;
+    cursor: pointer;
+}
+.icon-circle:hover {
+    /* change color on hover (mouseover) */
+    color: #FFFFFF;
+    background: white; /* red */
+    }
+#footer {
+    width: 100%;
+    background: #F1F1F1; /* light gray */
+    border-top: 1px solid #D4D4D4; /* dark gray "topline" */
+    height: 100px;
+    }
+.hidden {
+    display: none;
+}
+.note-image {
+    text-align: center;
+}
+#background-head {
+    background-color: lightblue;
+}
+.background-link {
+    background-color:#def;background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%),
+    radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);background-size:80px 80px;background-position:0 0, 40px 40px;
+}

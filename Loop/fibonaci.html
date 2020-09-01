@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonaci</title>
+</head>
+<body>
+    <script>
+        let a=0,b=1;
+        let c, i, n, tong=0;
+        //document.write(a + '</br>' + b + '</br>') ;
+        n = prompt('Nhập số lượng Fibonaci cần tìm: ');
+        for(i=0; i<n; i++){
+            c = a + b;
+            if(c%7==0){
+                //document.write(c + '</br>');
+                tong += c;
+            }
+            //document.write(c +'</br>');
+            a = b;
+            b = c;
+        }
+        document.write((tong+1) + '</br>');
+    </script>
+</body>
+</html>

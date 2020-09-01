@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check V</title>
+</head>
+<body>
+    <input type="text" name="get" id="get">
+    <button type="button" onclick="check()">Check</button>
+    <div id="result"></div>
+    <script>
+        var a = [];
+        var num, j;
+        for(let i = 0; i < 10; i++){
+            num = +prompt('nhập vào  mảng: ');
+            a.push(num);}
+        function check(){
+            var V = +document.getElementById('get').value;
+            for(j in a){
+                if(V === a[j]){
+                    document.getElementById('result').innerHTML = 'V is in The Array';
+                    break;
+                } else {
+                    document.getElementById('result').innerHTML = 'V is not in The Array';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

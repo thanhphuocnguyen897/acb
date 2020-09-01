@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form a Cylinder!</title>
+</head>
+<body>
+    <script>
+        function Cylinder(cyl_height, cyl_diameter){
+            this.cyl_height = cyl_height;
+            this.cyl_diameter = cyl_diameter;
+        }
+        Cylinder.prototype.Result = function(){
+            var radius = this.cyl_diameter/2;
+            return this.cyl_height*Math.PI*Math.pow(radius,2);
+        }
+        var cyl = new Cylinder(5,6);
+        console.log('Result is: ' + cyl.Result().toFixed(4));
+    </script>
+</body>
+</html>

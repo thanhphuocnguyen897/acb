@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lớn hơn 10</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var num;
+        var count=0;
+        for(let i = 0; i < 11;i++){
+            num = +prompt('Nhập chuỗi số: ');
+            a.push(num);
+            if(a[i] <= 10){
+                count++;
+            }
+        }
+        alert(count + ' lớn hơn hoặc bằng 10');
+    </script>
+</body>
+</html>

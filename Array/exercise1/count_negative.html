@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Negative</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var num, count=0;
+        for(let i = 0; i < 10; i++){
+            num = +prompt('nhập vào  mảng: ');
+            a.push(num);
+            if(a[i]<0){
+                count++;
+            }
+        }
+        document.write(a +'</br> số âm là: ' + count);
+
+    </script>
+</body>
+</html>

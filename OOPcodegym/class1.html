@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1</title>
+</head>
+<body>
+    <script>
+        //Cách 1: chưa tối ưu về bộ nhớ
+/*      function Apple(type){
+            this.type = type;
+            this.color = "Red";
+            this.getInfo = function(){
+                return this.color + ' ' + this.type + ' apple';
+            }
+        }
+        var apple1 = new Apple('macintosh');
+        apple1.color = 'Reddish';
+        console.log(apple1.getInfo()); */
+        //Cách 2: tối ưu về bộ nhớ
+/*         function Apple(type){
+            this.type = type;
+            this.color = "Red";
+        }
+        Apple.prototype.getInfor = function(){
+            return this.color + ' ' + this.type + ' apple';
+        }
+        var apple1 = new Apple('macintosh');
+        apple1.color = 'Reddish';
+        console.log(apple1.getInfor()); */
+        //cách 3: tạo nhanh sử dụng object literals.
+/*         let Apple = {
+            type: 'machintosh',
+            color: 'Reddish',
+            getInfor: function(){
+                return this.color + ' ' + this.type + ' apple';
+            }
+        }
+        Apple.color = 'Red';
+        alert(Apple.getInfor()); */
+        //cách 4: Singleton.
+        let Apple = new function(){
+            this.type = 'Macintosh';
+            this.color = 'Red';
+            this.getInfor = function(){
+                return this.color + ' ' + this.type + ' apple';
+            }
+        }
+        Apple.color = 'Reddish';
+        alert(Apple.getInfor());
+    </script>
+</body>
+</html>

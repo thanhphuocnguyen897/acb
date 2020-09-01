@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+<body>
+    <input type="text" name="words" id="words">
+    <button type="button" onclick="searchWords()">Tra từ!</button> <br>
+    <div id="result"></div>
+    <script>
+        var Eng = ["Dog","Cat","table","Desk","Pen","Glass","Grass","Budget","No","Yes","Chair","Shit"];
+        var Vi = ["Chó","Mèo","Bàn","Bàn làm việc","Bút","Kính","Cỏ","Ngân sách","Không","Có","Ghế","Cức"];
+        function searchWords(){
+        var words = document.getElementById('words').value;
+        for(let i = 0; i < Eng.length; i++){
+            if(Eng[i] === words ){
+                document.getElementById('result').innerHTML = Eng[i] + ': ' + Vi[i];
+                break;
+            }
+            else if(Vi[i]===words){
+                document.getElementById('result').innerHTML = Vi[i] + ': ' + Eng[i];
+                break;
+            }
+            else{
+                document.getElementById('result').innerHTML = 'Không tìm thấy từ!';
+            }
+        }
+    }
+    </script>
+</body>
+</html>

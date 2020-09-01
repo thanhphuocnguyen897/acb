@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add - Between Even</title>
+</head>
+<body>
+    <script>
+    var gtri = window.prompt('Nhập dãy số');
+    var str = gtri.toString();
+    var result = [str[0]];
+    var i;
+    for(i = 1; i<str.length; i++){
+        if(str[i-1] % 2 === 0 && str[i] % 2 === 0){
+            result.push('-',str[i]);
+        } else{
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+    </script>
+</body>
+</html>

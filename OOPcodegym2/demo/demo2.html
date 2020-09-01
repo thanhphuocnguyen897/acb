@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Person</title>
+</head>
+<body>
+    <script>
+        function Person(first, last, age, gender, interests){
+            this.name = {
+                first,
+                last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+
+                
+
+            this.bio = function(){
+                var string = this.name.first+' '+this.name.last+' is '+this.age+' years old.';
+                var pronoun;
+
+                if(this.gender == "male" || this.gender =="Male"){
+                    pronoun = " He likes ";
+                } else {
+                    pronoun = " She likes ";
+                };
+            string += pronoun;
+
+            if(this.interests.length == 1){
+                string += this.interests[0]+'. ';
+            } else if(this.interests.length == 2){
+                string += this.interests[0]+' and '+this.interests[1]+'.';
+            }
+            else {
+                for(let i = 0; i<this.interests.length; i++){
+                    if(i=== this.interests.length - 1){
+                        string+= ' and '+ this.interests[i] +'.';
+                    } else{
+                        string+= this.interests[i]+', ';
+                    }
+                }
+            }
+            alert(string);
+            };
+
+            this.greeting = function(){
+                alert('Hi i\'m '+ this.name.first+'.');
+            };
+        };
+        var person1 = new Person("Adele","Smith",32,'female',['music','skiing','fucking']);
+        person1.greeting();
+        person1.bio();
+        var person2 = new Person("Sam", "Smith", 33, "male", ["music","dancing"]);
+        person2.greeting();
+        person2.bio();
+    </script>
+</body>
+</html>

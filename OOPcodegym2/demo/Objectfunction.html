@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object function Create</title>
+</head>
+<body>
+    <script>
+        var person1 = new Object();
+        person1.name = "Chris";
+        person1['age']=38;
+        person1.greeting = function(){
+            alert('Hi! I\'m '+this.name+'.');
+        }
+        person1.greeting();
+        var person2 = Object.create(person1);
+        person2.name = "Hemsworth";
+        person2['age'] = 35;
+        person2.greeting();
+    </script>
+</body>
+</html>

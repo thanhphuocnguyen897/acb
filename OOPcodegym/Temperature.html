@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Class</title>
+</head>
+<body>
+    <script>
+        function Temperature(tempc){
+            this.tempc = tempc;
+            this.CtoF = function(){
+                if(tempc>-273)
+                {return (9/5)*tempc + 32;}
+                else return 0;
+            }
+            this.CtoK = function(){
+                if(tempc>-273){
+                    return tempc+273;
+                }
+            }
+        }
+        var temp1 = new Temperature(30);
+        alert('C to F is: ' + temp1.CtoF());
+        alert('C to K is: ' + temp1.CtoK());
+    </script>
+</body>
+</html>

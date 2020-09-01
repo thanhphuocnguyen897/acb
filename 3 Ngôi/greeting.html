@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting!!</title>
+</head>
+<body>
+    <form action="">
+        <label for="login">Nhập vị trí của bạn:</label>
+        <input type="text" name="login" id="login">
+        <button type="button" onclick="chao()">Chào</button>
+    </form>
+    <p id="result">Cách chào:</p>
+    <script>
+        function chao(){
+        var login = document.getElementById('login').value;
+        var result = (login == "Employee") ? "Hello" : ((login == "Director") ? "Greeting" : '');
+        document.getElementById('result').innerHTML = result;   
+    }
+    </script>
+</body>
+</html>

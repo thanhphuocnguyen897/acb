@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert money</title>
+</head>
+<body>
+<div style="margin:100px 400px;">
+<table style="border-radius: 20px; font-size: larger;">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="amount"></td>
+        <td><select name="country1" id="country1">
+            <option value="vnd">Việt Nam</option>
+            <option value="usa">USA</option>
+            </select>
+        </td>
+        <td><select name="country2" id="country2">
+            <option value="vnd">Việt Nam</option>
+            <option value="usa">USA</option>
+            </select>
+        </td>
+        <td><button type="button" onclick="convert()" style="margin-left: 10px;">Convert</button>
+        </td>
+        <td id="result">
+            Result: 
+        </td>
+    </tr>
+</table>
+</div>
+<script src="convert.js"></script>
+</body>
+</html>

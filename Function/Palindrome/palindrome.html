@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isPalindrome</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(s){
+            let len = s.length;
+            if(len == 0){
+                return 0;
+            }
+            else if(s[0]!=s[len-1]){
+                return false;
+                console.log(s[0] + s[len-1]);
+            }
+            else{
+                let res = s.substring(1,len-1)
+                isPalindrome(s);    
+            }
+            return true;
+        }
+        isPalindrome(prompt('nhập s:'));
+    </script>
+</body>
+</html>

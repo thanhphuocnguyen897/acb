@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Lamp</title>
+</head>
+<body>
+    <script>
+        var SwitchButton = function(){
+            this.status = false;
+            this.connectToLamp = function(lamp){
+                this.lamp = lamp;
+            };
+            this.switchOff = function(){
+                if(this.status == true){
+                this.status = false;
+                this.lamp.status = this.status;
+                lamp.turnOff();
+                } else { 
+                console.log("Already Off")
+                }
+            };
+
+            this.switchOn = function(){
+                if(this.status == false){
+                this.status = true;
+                this.lamp.status = this.status;
+                lamp.turnOn();
+                } else {
+                console.log("Already On")};
+            }
+        };
+        var ElectricLamp = function(){
+            this.status = false;
+            this.turnOff = function(){
+                if(this.status == false){
+                console.log("Turned Off")}
+            }
+            this.turnOn = function(){
+                if(this.status == true){
+                console.log("Turned On")}
+                
+            };
+        }
+        var button = new SwitchButton();
+        var lamp = new ElectricLamp();
+        button.connectToLamp(lamp);
+
+            button.switchOff();
+            button.switchOn();
+            console.log(button.status);
+            button.switchOff();
+        
+
+    </script>
+</body>
+</html>

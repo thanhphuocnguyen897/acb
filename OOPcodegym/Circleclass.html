@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circel Class</title>
+</head>
+<body>
+    <script>
+        let Circle = function(radius){
+            this.radius = radius;
+            this.color = "Red";
+            this.getRadius = function(){
+                return radius;
+            };
+            this.getArea = function(){
+                return Math.PI*radius*radius;
+            };
+        }
+        let circle1 = new Circle(2);
+        let radius1 = circle1.getRadius();
+        let area1 = circle1.getArea();
+        console.log(radius1 + ' Area: ' + area1);
+        let circle2 = new Circle(5);
+        let radius2 = circle2.getRadius();
+        let area2 = circle2.getArea();
+        alert(radius2 + ' ' + area2)
+    </script>
+</body>
+</html>

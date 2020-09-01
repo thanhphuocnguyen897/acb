@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add 1</title>
+</head>
+<body>
+<p>
+    <label for="number">Add 1</label>
+    <input type="number" name="number" placeholder="Nhập số"
+    oninput="addOne(this.value)" onchange="addOne(this.value)">
+</p>
+<p>Kết quả là: <span id="output"></span></p>
+    <script>
+        function addOne(num){
+            document.getElementById('output').innerHTML = parseInt(num)+1;
+        }
+    </script>
+</body>
+</html>

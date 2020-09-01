@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm vị trí giá trị</title>
+</head>
+<body>
+    <script>
+        let value = prompt("Nhập giá trị cần tìm: ");
+        let x = [1, 2, 3, 4, 5, 6, 7 ,8 , 9, 10, -1, -2, -3];
+        let i;
+        for(i in x){
+            if(value == x[i]){
+                alert('vị trí số: ' + i);
+            }
+        }
+    </script>
+</body>
+</html>

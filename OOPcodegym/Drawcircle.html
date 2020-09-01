@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Circle</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="900px" width="1800px" style="border: 2px solid #d3d3d3;"></canvas> <br>
+    <button type="button" onclick="createCircle3()">Change</button>
+    <script>
+        //Lấy thông số của htron`
+        function Circle(x, y, radius){
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        //vẽ hình tròn cố định cơ bản
+        function createCircle(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let circle = new Circle(500,400,100);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+            ctx.fillStyle = "#FF0000";
+            ctx.shadowColor = "black";
+            ctx.shadowBlur = 20;
+            ctx.fill();
+        }
+        //Với bán kính ngẫu nhiên: sử dụng hàm Math.random từ 0-100
+        function createCircle1(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            var radius1 =Math.floor(Math.random()*100);
+            let circle = new Circle(550,500,radius1);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+            ctx.fill();
+        }
+        /* Với màu và bán kính ngẫu nhiên: với random bán kính trong khoảng 30-120
+        và 2 hàm lấy màu ngẫu nhiên từ 0-255 */
+        function getRandomHex(){
+            return Math.floor(Math.random()*255);
+        }
+        function getRandomColor(){
+            var red = getRandomHex();
+            var green = getRandomHex();
+            var blue = getRandomHex();
+            return "rgb(" + red + ", " + blue + ", " + green + ")";
+        }
+        function createCircle2(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            var radius2 =Math.floor(Math.random()*120)+30;
+            let circle = new Circle(550,500,radius2);
+            let color = getRandomColor();
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+        /*Với toạ độ ngẫu nhiên: lấy random trong kích thước cửa sổ trình duyệt bằng
+        innerHeight và innerWidth */
+        function createCircle3(){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            var radius3 =Math.floor(Math.random()*120)+30;
+            var x = Math.random()*window.innerWidth;
+            var y = Math.random()*window.innerHeight;
+            let color = getRandomColor();
+            let circle = new Circle(x,y,radius3);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+        /* Vẽ 2 hình tròn: Cách này không tối ưu thay vào đó sử dụng vòng lặp
+        createCircle3();
+        createCircle3(); */
+        function drawMultiCircle(){
+            for(let i = 1; i<45; i++){
+                createCircle3();
+            }
+        }
+        drawMultiCircle();
+    </script>
+</body>
+</html>

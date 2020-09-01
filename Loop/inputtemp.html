@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nhập Nhiệt Độ</title>
+</head>
+<body>
+    <script>
+        let tem; 
+        do{
+            tem = +prompt('Nhập nhiệt độ: ');
+            if (tem>100){
+                alert('giảm nhiệt độ');
+            }
+            else if (tem<20){
+                alert('tăng nhiệt độ');
+            }
+            }
+        while(tem<100 || tem>20){
+            alert('nhập lại');
+        }
+    </script>
+</body>
+</html>

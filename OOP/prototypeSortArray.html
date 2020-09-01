@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array Algorithm</title>
+</head>
+<body>
+    <script>
+        Array.prototype.SortArray = function(){
+            var check = false;
+            while(!check){
+                check = true;
+                for(var i = 0; i < this.length; i++){
+                    if(this[i+1]<this[i]){
+                        var x = this[i];
+                        this[i] = this[i+1];
+                        this[i+1] = x;
+                        check = false;
+                    }
+                }
+            }
+            return this;
+        }
+        console.log([7,8,9,10,16,98,41,47,56,2,1].SortArray())
+    </script>
+</body>
+</html>

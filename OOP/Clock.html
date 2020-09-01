@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Clock</title>
+</head>
+<body>
+    <script>
+/*         function myClock(){
+            this.day = new Date();
+            this.hours = this.day.getHours();
+            this.minutes = this.day.getMinutes();
+            this.seconds = this.day.getSeconds();
+        }
+        myClock.prototype.updateTime = function(secs){
+            this.seconds += secs;
+            if (this.seconds>= 60){
+                this.minutes++;
+                this.seconds = 0;
+            }
+            if(this.minutes >= 60){
+                this.hours++;
+                this.minutes = 0;
+            }
+            if(this.hours >=24){
+                this.hours = 0;
+            }
+        }
+        myClock.prototype.update = function(){
+            this.updateTime(1);
+            console.log(this.hours + ":" + this.minutes + ":" + this.seconds);
+        }
+        myClock.prototype.run = function(){
+            setInterval(this.update.bind(this), 1000);
+        };
+        var clock = new myClock();
+        clock.run(); */
+        class Clock
+{
+  run() {
+    this.timer = setInterval(this.update.bind(this), 1000);
+  }
+
+  update() {
+    console.log((new Date()).toLocaleTimeString());
+  }
+
+}
+
+(new Clock()).run();
+    </script>
+</body>
+</html>

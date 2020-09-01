@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Up-Down!</title>
+</head>
+<body>
+    <script>
+        var inp = window.prompt('Nhập chuỗi:');
+        var str = inp.toString();
+        var upper = str.toUpperCase();
+        alert(upper);
+        var lower = str.toLowerCase();
+        alert(lower);
+        var a = [];
+        alert(a);
+        for(let i = 0; i < str.length ; i++){
+            if (upper.indexOf(str[i]) !== -1){
+                a.push(str[i].toLowerCase());
+            }
+            else if (lower.indexOf(str[i]) !== -1){
+                a.push(str[i].toUpperCase());
+            }
+            else{
+                a.push(str[i]);
+            }
+        }
+        document.write(a.join(''));
+    </script>
+</body>
+</html>

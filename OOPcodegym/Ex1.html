@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <script>
+        function Student (id, name, address){
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.getInfor = function () {
+                return "Id = "+ this.id +" Name =" + this.name + " Address=" + this.address;
+            }        
+        }
+        var student = new Student(2, "Nguyen Thanh B,", "TTH");
+        console.log(student.getInfor());
+        var student1 = {
+            id1: 01,
+            name1: "Nguyen Thanh B",
+            address1: "TTH",
+            getInfor1: function(){
+                return "Id = "+ this.id1 +" Name =" + this.name1 + " Address=" + this.address1;
+            }
+        }
+        console.log(student1.name1);
+        console.log(student1.getInfor1());
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Class</title>
+</head>
+<body>
+    <form action="">
+        <button type="button" onclick="nokia.sendMessage(iphone)" style="position: absolute; left: 50px; top: 100px;">Send</button>
+        <button type="button" onclick="console.log('Nokia Received Box '+nokia.seeReBox())" style="position: absolute; left: 110px; top: 100px;">Received Box</button>
+        <button type="button" onclick="console.log('Nokia Sent Box '+nokia.seeSeBox())" style="position: absolute; left: 220px; top: 100px;">Sent Box</button>
+        <button type="button" onclick="nokia.toggleDevice()" style="position: absolute; left: 50px; top: 20px;">Power Button</button>
+        <button type="button" onclick="alert(nokia.statusDevice())" style="position: absolute; left: 150px; top: 20px;">Check Status</button>
+        <button type="button" onclick="nokia.chargeDevice()" style="position: absolute; left: 100px; top: 500px;">Charge Device</button>
+        <button type="button" onclick="iphone.sendMessage(nokia )" style="position: absolute; left: 450px; top: 100px;">Send</button>
+        <button type="button" onclick="console.log('Iphone Received Box ' + iphone.seeReBox())" style="position: absolute; left: 510px; top: 100px;">ReceivedBox</button>
+        <button type="button" onclick="console.log('Iphone Sent Box '+iphone.seeSeBox())" style="position: absolute; left: 610px; top: 100px;">Sent Box</button>
+        <button type="button" onclick="iphone.toggleDevice()" style="position: absolute; left: 450px; top: 20px;">Power Button</button>
+        <button type="button" onclick="alert(iphone.statusDevice())" style="position: absolute; left: 550px; top: 20px;">Check Status</button>
+        <button type="button" onclick="iphone.chargeDevice()" style="position: absolute; left: 500px; top: 500px;">Charge Device</button>
+        <label for="sendmessage" style="position: absolute;
+        left: 50px; top: 130px;">Message</label>
+        <textarea name="sendmessage" id="sendmessage" cols="28" rows="20" style="position: absolute;
+         left: 50px; top: 150px;">type anything...</textarea>
+         <label for="sendmessage" style="position: absolute;
+         left: 450px; top: 130px;">Message</label>
+         <textarea name="sendmessage2" id="sendmessage2" cols="28" rows="20" style="position: absolute; left: 450px; top: 150px;">Type something....</textarea>
+    </form>
+    <canvas id="myCanvas" width="1000px" height="2000px"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.arc(150, 570, 30, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.rect(10, 10, 300, 600);
+        ctx.stroke();
+        ctx.rect(35, 50, 250, 480);
+        ctx.stroke();
+        ctx.rect(425, 50, 250, 480);
+        ctx.stroke();
+        ctx.rect(400, 10, 300, 600);
+        ctx.stroke();
+        ctx.font = "30px Arial";
+        ctx.strokeText("NOKIA", 500, 590);
+        var Mobile = function() {
+            this.battery = 0;
+            this.typingMessage = "";
+            this.recievedBox = [];
+            this.sentBox = [];
+            this.status = false;
+            //Chức năng kiểm tra trạng thái điện thoại:
+            this.statusDevice = function(){
+                return this.status;
+                if(this.battery < 15){
+                    alert('Low Battery')
+                };
+            };
+            //Bật tắt điện thoại
+            this.toggleDevice = function(){
+                this.status = !this.status;
+                this.battery--;
+            };
+            //Sạc pin.
+            this.chargeDevice = function(){
+                for(let i = 1; this.battery<=99; i++){
+                    this.battery++;
+                    if(this.battery>=100){
+                        alert("Full Charged!");
+                    };
+                };
+            };
+            //Lưu Soạn thảo tin nhắn.
+            this.textMessage = function(message){
+                if(this.battery>0 && this.status == true){
+                    this.typingMessage = message;
+                }
+                this.battery--;
+            };
+            //Nhận tin nhắn từ máy khác
+            this.recieveMessage = function(rmessage){
+                if(this.battery>0 && this.status == true){
+                    this.recievedBox.unshift(rmessage);
+                }
+                this.battery--;
+            };
+            //Gửi tin tới máy khác
+            this.sendMessage = function(who){
+                if(this.battery>0 && this.status ==true){
+                    who.recieveMessage(this.typingMessage);
+                    this.sentBox.unshift(this.typingMessage);
+                }
+                this.battery--;
+            };
+            //Xem tin trong hộp thư đến.
+            this.seeReBox = function(){
+                if(this.battery>0 && this.status ==true){
+                return this.recievedBox;
+                }
+                this.battery--;
+            }
+            //Xem tin hộp thư đi.
+            this.seeSeBox = function(){
+                if(this.battery>0 && this.status == true){
+                return this.sentBox;
+                }
+                this.battery--;
+            }
+        }
+        var nokia = new Mobile();
+        var iphone = new Mobile();
+        var nmessage = document.getElementById('sendmessage');
+        var imessage = document.getElementById('sendmessage2');
+        nokia.textMessage(nmessage);
+        nokia.textMessage(imessage);
+        console.log("Pin nokia "+ nokia.battery + " Pin iphone: " + iphone.battery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max & Locate</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var num;
+        var max=0, locate, j;
+        for(let i = 0; i < 10; i++){
+            num = +prompt('nhập vào mảng: ');
+            a.push(num);
+        }
+        document.write(a)
+        for(j in a){
+            
+            if(a[j] >= max){
+                max = a[j];
+            }
+        }
+        alert('số lớn nhất là: ' + max)
+        for(j in a){
+            if(a[j]=== max){
+                alert('vị trí lớn nhất là: ' + j);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

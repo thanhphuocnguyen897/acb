@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter and Area Circle</title>
+</head>
+<body>
+    <script>
+        function Circle(radius){
+            this.radius = radius;
+            this.Area = function(){
+                return Math.PI*this.radius*this.radius;
+            }
+            this.Perimeter = function(){
+                return 2*Math.PI*this.radius;
+            }
+        }   
+        var c = new Circle(6);
+        console.log('Area and Perimeter is ' + c.Area().toFixed(2) +' and '   + c.Perimeter().toFixed(2));
+    </script>
+</body>
+</html>

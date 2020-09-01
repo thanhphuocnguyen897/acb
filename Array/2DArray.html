@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro Board</title>
+</head>
+<body>
+    <div id="board"></div>
+    <button type="button" onclick="change()">Change Value</button> </br></br>
+    <script>
+        var caro = new Array(5);
+        var i, j;
+        for(i=0; i<5; i++){
+            caro[i] = new Array(5);
+        }
+        caro[0][0] = 0; caro[0][1] = 0; caro[0][2] = 0; caro[0][3] = 0; caro[0][4] = 0;
+        caro[1][0] = 0; caro[1][1] = 0; caro[1][2] = 0; caro[1][3] = 0; caro[1][4] = 0;
+        caro[2][0] = 0; caro[2][1] = 0; caro[2][2] = 0; caro[2][3] = 0; caro[2][4] = 0;
+        caro[3][0] = 0; caro[3][1] = 0; caro[3][2] = 0; caro[3][3] = 0; caro[3][4] = 0;
+        caro[4][0] = 0; caro[4][1] = 0; caro[4][2] = 0; caro[4][3] = 0; caro[4][4] = 0;
+        for(i=0; i< caro.length; i++){
+            for(j=0; j<caro[i].length; j ++){
+            document.getElementById('board').innerHTML = document.getElementById('board').innerHTML + caro[i][j] + " &nbsp; ";
+            }
+            document.getElementById('board').innerHTML = document.getElementById('board').innerHTML + ('</br>');    
+        }
+        function change(){
+            var col = +prompt("Nhập vị trí cột: ");
+            var row = +prompt("Nhập ví trí hàm: ");
+            caro[row][col] = "x";
+            document.getElementById('board').innerHTML = "";
+            for(i=0; i< caro.length; i++){
+            for(j=0; j<caro[i].length; j ++){
+                document.getElementById('board').innerHTML = document.getElementById('board').innerHTML + caro[i][j] + " &nbsp; ";
+            }
+            document.getElementById('board').innerHTML = document.getElementById('board').innerHTML + ('</br>');    
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <script>
+/*         let person = {
+            name: ['Bob', 'Smith'],
+            age: 32,
+            gender: 'male',
+            interests: ['music', 'skiing'],
+            bio: function () {
+                alert(this.name[0] + ' ' + this.name[1] + ' is '+ this.age + 'years old. He likes ' + this.interests[0]
+                + ' and ' +this.interests[1]+ '.');
+            },
+            greeting: function(){
+                alert('Hi! I\'m ' + this.name[0] + '.');
+            }
+        };
+        person.greeting();
+        person.bio(); */
+        let person1 = {
+            name1: {first: 'Bib',
+                    last: 'Smith'},
+            age1: 32,
+            gender1: 'male',
+            interests1: {in1: 'music',
+                        in2: 'football'},
+            bio1: function () {
+                alert(this.name1.first + ' ' + this.name1.last + ' is '+ this.age1 + ' years old. He likes ' + this.interests1.in1
+                + ' and ' +this.interests1.in2+ '.');
+            },
+            greeting1: function(){
+                alert('Hi! I\'m ' + this.name1.first + '.' + 'I have '+ this.eyes + ' eyes');
+            }
+        };
+        person1.age1 = 45;
+        person1['name1']['last'] = 'Cratchit';
+        person1['eyes'] = 'Hazel';
+        person1.farewell = function () {alert("bye everybody!");}
+/*         person1.bio1();
+        person1.greeting1();
+        person1.farewell(); */
+        let myDataName = 'height';
+        let myDataValue = '1.75m';
+        person1[myDataName] = myDataValue;
+        console.log(person1.height);
+    </script>
+</body>
+</html>
